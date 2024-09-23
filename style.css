@@ -1,0 +1,200 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+
+
+/* Resulting Behavior
+
+On Large Screens:
+
+The card will take up 90% of the container's width (like the body or a parent div). If the container is wider than 470px, the card will still be capped at 470px. So, it won’t exceed this max width.
+
+If the viewport is wide enough (say, 800px or more), the card will be 470px wide.
+
+
+On Small Screens:
+
+If the viewport width is less than 470px, the card will adapt to 90% of the available space. For instance, if the viewport is 300px wide, the card will be 270px (90% of 300px).
+Summary
+With width: 90%; and max-width: 470px;
+
+The card is flexible and responsive, taking up 90% of the available width but not exceeding 470px.
+Effect: This setup allows for better responsiveness across different screen sizes while still having a maximum limit to prevent the card from becoming too wide on larger displays.
+
+This arrangement is often used for cards or containers in responsive designs to ensure they look good on both small and large screens.
+
+
+
+The CSS rule margin: 100px auto 0; specifies the margin for an element using shorthand notation. Here's a breakdown of what each value means:
+
+Breakdown:-
+
+100px: This sets the top margin to 100 pixels. It creates space above the element.
+
+auto: This sets the left and right margins to auto. In a block-level element, using auto for the left and right margins centers the element horizontally within its container. The browser calculates equal margins on both sides to achieve this.
+
+0: This sets the bottom margin to 0 pixels, meaning there will be no space below the element.
+
+Purpose:-
+
+Vertical Spacing: The top margin (100px) provides vertical space above the element, which can help with layout and spacing.
+
+Horizontal Centering: The auto value for the left and right margins ensures that the element is centered within its container, making the layout more visually appealing and balanced.
+
+Controlled Bottom Margin: Setting the bottom margin to 0 pixels can be useful to avoid unnecessary space below the element, allowing for a tighter layout with adjacent elements.
+
+Example Usage:-
+
+This type of margin setting is often used for centered elements like headers, cards, or sections in a responsive design to maintain a clean and organized appearance.
+
+
+
+
+Border: This is a shorthand property that can set the width, style, and color of an element's border all at once.
+0: Setting the border to 0 effectively means:
+
+Width: The border width is set to 0.
+Style: The border style is not applied (the style must be set for the border to be visible).
+Color: The border color is not specified, as there’s no visible border.
+
+Purpose:-
+
+Removing Borders: It’s commonly used to eliminate borders on elements like buttons, inputs, or images, creating a cleaner appearance.
+
+Resetting Styles: When applying CSS resets or normalizations, border: 0; can be part of the process to ensure that all browsers render elements consistently without default borders.
+
+Custom Styling: When you want to apply your own styles without any interference from default borders.
+
+
+
+
+In CSS, flex: 1 is a shorthand property used within a flexbox layout. It effectively sets the flex-grow, flex-shrink, and flex-basis properties all at once. Here’s what it does:
+
+flex-grow: It allows the item to grow and fill the available space in the flex container. A value of 1 means it can grow to take up any extra space.
+
+flex-shrink: It allows the item to shrink if necessary when the container is too small. A value of 1 means it can shrink as needed.
+
+flex-basis: It sets the initial size of the flex item before any space distribution occurs. If you just use flex: 1, it defaults to 0, meaning the item will initially have no base size, relying entirely on the grow and shrink properties.*/
+
+.card {
+
+  background: linear-gradient(135deg, #001F3F, #4B0082);
+  width: 90%;
+  max-width: 470px;
+  color: #fff; 
+  margin: 100px auto 0;
+  border-radius: 20px;
+  padding: 40px 35px;
+  text-align: center;
+}
+
+.search {
+
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search input{
+
+  border: 0;
+  outline: 0;
+  background: white;
+  color: #555;
+  padding: 10px 25px;
+  /* height: 60px; */
+  border-radius: 30px;
+  flex: 1;
+  margin-right: 16px;
+  font-size: 18px;
+}
+
+.search button{
+
+  border: 0;
+  outline: 0;
+  background: white;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+
+.search button img {
+
+  width: 20px;
+}
+
+.weather-icon{
+  width: 170px;
+  margin-top: 30px;
+}
+
+.temp{
+
+  font-size: 80px;
+  font-weight: 500;
+  
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.city{
+
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: -5px;
+
+  /* font-family: "Bebas Neue", sans-serif;
+  font-weight: 800;
+  font-style: normal; */
+
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+
+  /* font-family: "Pacifico", cursive;
+  font-weight: 600;
+  font-style: normal; */
+
+  
+}
+
+.details{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 50px;
+}
+
+.col{
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.col img{
+
+  width: 40px;
+  margin-right: 10px;
+}
+
+.humidity, .wind{
+  font-size: 28px;
+  margin-top: -6px;
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+ 
+}
